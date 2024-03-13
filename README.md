@@ -1,1 +1,1 @@
-# DemoSketch2RGB
+# StableSketching
