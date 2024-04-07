@@ -1,9 +1,320 @@
 <!DOCTYPE html>
 <html>
 
-<body>
+<head>
+   <style>
+      td,
+      th {
+         border: 0px solid black;
+      }
 
-<h1>Coming soon...</h1>
+      img {
+         padding: 5px;
+      }
+   </style>
+   <title>It's All About Your Sketch: Democratising Sketch Control in Diffusion Models</title>
 
-</body>
+   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+   <link rel="stylesheet" href="./static/css/bulma.min.css">
+   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+   <link rel="stylesheet" href="./static/css/index.css">
+   <link rel="icon" href="./static/images/favicon.svg">
+   <link rel="stylesheet" href="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.css">
+   <link rel="stylesheet" href="css/app.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <script src="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script defer src="./static/js/fontawesome.all.min.js"></script>
+   <script src="./static/js/bulma-carousel.min.js"></script>
+   <script src="./static/js/bulma-slider.min.js"></script>
+   <script src="./static/js/index.js"></script>
+</head>
+
+<section class="hero">
+   <div class="hero-body">
+      <div class="container is-max-desktop">
+         <div class="columns is-centered">
+            <div class="column has-text-centered">
+               <h1 class="title is-1 publication-title" , style="color:purple;">It's All About Your Sketch:</h1>
+               <h1 class="title is-4 publication-title">Democratising Sketch Control in Diffusion Models</h1>
+               <div class="is-size-5 publication-authors">
+                  <span class="author-block">
+                     <a href="https://subhadeepkoley.github.io/">Subhadeep Koley</a><sup>1,2</sup>,</span>
+                  <span class="author-block">
+                     <a href="https://ayankumarbhunia.github.io/">Ayan Kumar Bhunia</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                     <a href="https://scholar.google.com/citations?user=SoQ1vtAAAAAJ">Deeptanshu
+                        Sekhri</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                     <a href="https://aneeshan95.github.io/">Aneeshan Sain</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                     <a href="http://www.pinakinathc.me/">Pinaki Nath Chowdhury</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                     <a href="https://www.surrey.ac.uk/people/tao-xiang">Tao
+                        Xiang</a><sup>1,2</sup>,</span>
+                  <span class="author-block">
+                     <a href="https://www.surrey.ac.uk/people/yi-zhe-song">Yi-Zhe Song</a><sup>1,2</sup></span>
+                  </span>
+               </div>
+               <div class="is-size-5 publication-authors">
+                  <span class="author-block"><sup>1</sup>SketchX, CVSSP, University of Surrey, United Kingdom</span>
+                  <span class="author-block"><sup>2</sup>iFlyTek-Surrey Joint Research Centre on Artifiial
+                     Intelligence</span>
+               </div>
+               <!--     <div class="column has-text-centered">
+                     <a href="as">ICLR 2023</a>
+                     </span>
+                     </div> -->
+               <div class="column has-text-centered">
+                  <div class="publication-links">
+                     <!-- PDF Link. -->
+                     <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2403.07234"
+                           class="external-link button is-normal is-rounded is-dark">
+                           <span class="icon">
+                              <i class="fas fa-file-pdf"></i>
+                           </span>
+                           <span>Paper (PDF)</span>
+                        </a>
+                     </span>
+                     <span class="link-block">
+                        <a href="https://arxiv.org/abs/2403.07234"
+                           class="external-link button is-normal is-rounded is-dark">
+                           <span class="icon">
+                              <i class="ai ai-arxiv"></i>
+                           </span>
+                           <span>arXiv</span>
+                        </a>
+                     </span>
+                     <!-- Video Link. -->
+                     <span class="link-block">
+                        <a href="" class="external-link button is-normal is-rounded is-dark">
+                           <span class="icon">
+                              <i class="fab fa-youtube"></i>
+                           </span>
+                           <span>Video (YouTube)</span>
+                        </a>
+                     </span>
+
+                     <!-- Dataset Link. -->
+                     <span class="link-block">
+                        <a href="" class="external-link button is-normal is-rounded is-dark">
+                           <span class="icon">
+                              <i class="far fa-images"></i>
+                           </span>
+                           <span>Poster</span>
+                        </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="hero teaser">
+   <div class="container is-max-desktop">
+      <div class="hero-body">
+         <img class="round" style="width:1500px" src="./static/images/teaser.png" />
+         <h2 class="subtitle has-text-centered">
+            <span class="dnerf"></span> (Top-left:) Comparison of images generated by our method with SGDM, ControlNet,
+            and T2I-Adapter. (Top-right:)
+            A set of photos generated by our method. Bottom: While existing methods generate realistic images from
+            pixel-perfect edgemaps,
+            they perform sub-optimally for freehand abstract sketches.
+
+         </h2>
+      </div>
+   </div>
+</section>
+
+<section class="section">
+   <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+         <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+               This paper unravels the potential of sketches for diffusion models, addressing the deceptive promise of
+               direct sketch control in generative AI. We importantly democratise the process, enabling amateur sketches
+               to generate precise images, living up to the commitment of "what you sketch is what you get". A pilot
+               study underscores the necessity, revealing that deformities in existing models stem from
+               spatial-conditioning. To rectify this, we propose an abstraction-aware framework, utilising a sketch
+               adapter, adaptive time-step sampling, and discriminative guidance from a pre-trained fine-grained
+               sketch-based image retrieval model, working synergistically to reinforce fine-grained sketch-photo
+               association. Our approach operates seamlessly during inference without the need for textual prompts; a
+               simple, rough sketch akin to what you and I can create suffices! We welcome everyone to examine results
+               presented in the paper and its supplementary. Contributions include democratising sketch control,
+               introducing an abstraction-aware framework, and leveraging discriminative guidance, validated through
+               extensive experiments.
+               </p>
+            </div>
+         </div>
+      </div>
+
+      <!-- <section class="hero teaser">
+         <div class="container is-max-desktop">
+            <div class="hero-body">
+               <iframe width="720" height="480" src="https://www.youtube.com/embed/k7xFbELpnv4?">
+               </iframe>
+               <h2 class="subtitle has-text-centered">
+                  <span class="dnerf"></span>
+               </h2>
+            </div>
+         </div>
+      </section> -->
+
+      <!--/ Abstract. -->
+      <!-- Paper video. -->
+      <section class="section">
+         <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+               <div class="column is-four-fifths">
+                  <h2 class="title is-3">Pilot Study</h2>
+                  <div class="content has-text-justified">
+                     </h2>
+                     <center>
+                        <img src="./static/images/pilot.png" alt="" border=0 height=600 width=2000></img></ </center>
+                        <h5 class="subtitle has-text-centered">
+                           Images generated by T2I-Adapter for different sketch-guidance factors (ω ∈ [0, 1]).
+                           Determining the optimum ω to obtain
+                           an ideal balance (green-bordered) between photorealism and sketch-fidelity requires manual
+                           intervention and is sample-specific. A high
+                           value of ω works well for less deformed sketches, while the same for an abstract sketch
+                           produces deformed outputs and vice-versa.
+                        </h5>
+
+                  </div>
+               </div>
+            </div>
+      </section>
+      <section class="section">
+         <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+               <div class="column is-four-fifths">
+                  <h2 class="title is-3">Architecture</h2>
+                  <div class="content has-text-justified">
+                     </h2>
+                     <center>
+                        <img src="./static/images/arch.png" alt="" border=0 height=300 width=1000></img></ </center>
+                        <h5 class="subtitle has-text-centered">
+                           Our overall training pipeline.
+                        </h5 &nbsp; </div>
+                  </div>
+               </div>
+      </section>
+      <section class="hero">
+         <div class="hero-body">
+            <div class="container is-max-desktop">
+               <!-- Abstract. -->
+               <div class="columns is-centered has-text-centered">
+                  <div class="column is-four-fifths">
+                     <h2 class="title is-3">Results</h2>
+                     <div class="content has-text-justified">
+                        <center>
+                           <img src="static/images/qual_1.png" border=0 height=200 width=1500 />
+                        </center>
+                        <h5 class="subtitle has-text-centered">
+                           Qualitative comparison with SOTA sketch-to-image generation models on Sketchy. For
+                           ControlNet, T2I-Adapter,
+                           and PITI, we use the fixed prompt “a photo of [CLASS]”, with [CLASS] replaced with
+                           corresponding class-labels of the input sketches.
+                           <br>
+                           <br>
+                           <center>
+                              <img src="static/images/qual_2.png" border=0 height=150 width=800 />
+                           </center>
+                           <h5 class="subtitle has-text-centered">
+                              Examples showing generalisation potential across different datasets (left) and
+                              stroke-styles (right).
+
+                              <br>
+                              <br>
+                              <center>
+                                 <img src="static/images/qual_3.png" border=0 height=400 width=900 />
+                              </center>
+                              <h5 class="subtitle has-text-centered">
+                                 Illustration of cross-model generalisation. Our method trained with SD v1.5, performs
+                                 well on other unseen SD variants (e.g., v1.4) without further fine-tuning.
+                                 <br>
+                                 <br>
+                                 <center>
+                                    <img src="static/images/qual_4.png" border=0 height=300 width=900 />
+                                 </center>
+                                 <h5 class="subtitle has-text-centered">
+                                    Examples depicting the effect of adding noisy strokes (left) and generation from
+                                    partially-completed sketches (right).
+                                    <br>
+                                    <br>
+                                    <center>
+                                       <img src="static/images/qual_5.png" border=0 height=300 width=900 />
+                                    </center>
+                                    <h5 class="subtitle has-text-centered">
+                                       Our method seamlessly transfers local semantic edits on input sketches into
+                                       output photos.
+                                       <br>
+                                       <br>
+                                       <center>
+                                          <img src="static/images/qual_6.png" border=0 height=600 width=900 />
+                                       </center>
+                                       <h5 class="subtitle has-text-centered">
+                                          Qualitative comparison with SOTAs. For ControlNet, T2I-Adapter, and PITI, we
+                                          use the fixed prompt “a photo of [CLASS]”, with [CLASS] replaced with
+                                          corresponding class-labels of the input sketches.
+                                          <br>
+                                          <br>
+                                          <center>
+                                             <img src="static/images/supp_qual.gif" border=0 height=250 width=900 />
+                                          </center>
+                                          <h5 class="subtitle has-text-centered">
+                                             Images generated by our method.
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <section class="section" id="BibTeX">
+               <div class="container is-max-desktop content">
+                  <h2 class="title">BibTeX</h2>
+                  <pre><code>@inproceedings{koley2024handle,
+title={{It's All About Your Sketch: Democratising Sketch Control in Diffusion Models}},
+author={Koley, Subhadeep and Bhunia, Ayan Kumar and Sekhri, Deeptanshu and Sain, Aneeshan and Chowdhury, Pinaki Nath and Xiang, Tao and Song, Yi-Zhe},
+booktitle={CVPR},
+year={2024}
+}</code></pre>
+               </div>
+            </section>
+            <script>
+               const viewers = document.querySelectorAll(".image-compare");
+               viewers.forEach((element) => {
+                  let view = new ImageCompare(element, {
+                     hoverStart: true,
+                     addCircle: true
+                  }).mount();
+               });
+
+               $(document).ready(function () {
+                  var editor = CodeMirror.fromTextArea(document.getElementById("bibtex"), {
+                     lineNumbers: false,
+                     lineWrapping: true,
+                     readOnly: true
+                  });
+                  $(function () {
+                     $('[data-toggle="tooltip"]').tooltip()
+                  })
+               });
+            </script>
+            <br>
+
+            <p style="text-align:center"> <img
+                  src="https://badges.toozhao.com/badges/01HTTYS41N2AZGMDRW3N6W2P09/green.svg" /> </a></p>
+
+            <p style="text-align:center"> Copyright: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> CC
+                  BY-NC-SA 4.0</a> © Subhadeep Koley | Last updated: 05 April 2024 | Good artists <a
+                  href="https://nerfies.github.io/"> copy</a>, great artists steal.</a></p>
+            </body>
+
 </html>
